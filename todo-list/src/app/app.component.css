@@ -1,0 +1,12 @@
+button {
+    margin-top: 10px;
+    margin-left: 93%;
+}
+
+.todo-form-container {
+    position: absolute;
+    z-index: 1;
+    width: 33%;
+    height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

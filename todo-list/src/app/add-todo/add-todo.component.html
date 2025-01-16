@@ -1,0 +1,42 @@
+<div class="todo-wrapper">
+  <div class="todo-overlay">
+    <div class="todo-form">
+      <div class="close-todo">
+        <span>Add Todo</span>
+        <i class="bi bi-x-lg" (click)="closeTodo()"></i>
+      </div>
+      <form #todoForm="ngForm" (ngSubmit)="addNewTodo(todoForm)">
+        <div class="form-outline">
+          <input
+            type="text"
+            class="form-control form-control-md mb-2"
+            name="title"
+            [(ngModel)]="newTodo.title"
+            #title="ngModel"
+            required
+            placeholder="Title"
+          />
+          <div *ngIf="title.invalid && title.touched" class="text-danger">
+            Title is required.
+          </div>
+          <textarea
+            class="form-control"
+            name="description"
+            rows="3"
+            [(ngModel)]="newTodo.description"
+            #description="ngModel"
+            required
+            placeholder="Description"
+          ></textarea>
+          <div *ngIf="description.invalid && description.touched" class="text-danger">
+            Description is required.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary ms-2" [disabled]="todoForm.invalid">
+          Add Todo
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="scrim" (click)="closeTodoByEmit()"></div>
+</div>

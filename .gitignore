@@ -1,0 +1,11 @@
+app-server/node_modules
+app-server/package-lock.json
+app-server/dist
+
+todo-list/node_modules
+todo-list/package-lock.json
+todo-list/dist
+
+database/node_modules
+database/package-lock.json
+database/dist

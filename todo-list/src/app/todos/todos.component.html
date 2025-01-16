@@ -1,0 +1,13 @@
+<div>
+    <div class="todo-list">
+        <h2>Todo List</h2>
+        <div class="todo-list-header">
+            <div class="titile-header">Title</div>
+            <div class="description-header">Description</div>
+            <div class="isActive-header">Active</div>
+        </div>
+        @for (todoDoc of todosDocs; track $index) {
+            <app-todo-item [todoDoc]="todoDoc"></app-todo-item>
+        }
+    </div>
+</div>

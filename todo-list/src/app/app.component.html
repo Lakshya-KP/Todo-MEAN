@@ -1,0 +1,5 @@
+<button class="btn btn-primary" (click)="toggleAddTodo()">Add Todo</button>
+
+<app-add-todo *ngIf="showAddTodo" (todoClose)="toggleAddTodo()"></app-add-todo>
+
+<app-todos></app-todos>

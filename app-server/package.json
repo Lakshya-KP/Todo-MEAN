@@ -1,0 +1,29 @@
+{
+  "name": "app-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc-watch --compiler typescript/bin/tsc --onSuccess \"node local.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "common": "../common/dist",
+    "cors": "^2.8.5",
+    "database": "../database/dist",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.3",
+    "tsc-watch": "^6.2.1",
+    "uuid": "^11.0.4"
+  }
+}

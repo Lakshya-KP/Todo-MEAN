@@ -1,0 +1,29 @@
+<div class="todo-item">
+    <div class="todo-title">
+        <input
+            
+            type="text"
+            placeholder="title"
+            [(ngModel)]="todoDoc.todo.title"
+            (click)="inputClicked()"
+        />
+    </div>
+    <div class="todo-description">
+        <input
+            
+            type="text"
+            placeholder="description"
+            [(ngModel)]="todoDoc.todo.description"
+            (click)="inputClicked()"
+        />
+    </div>
+
+    <div *ngIf="isEditing; else displayActive">
+        <div class="todo-action-button">
+            <button class="btn btn-primary btn-sm" (click)="saveChanges(todoDoc._id)">Save</button>
+        </div>
+    </div>
+    <ng-template #displayActive>
+        <div class="todo-isActive">{{ todoDoc.todo.isActive }}</div>
+    </ng-template>
+</div>
