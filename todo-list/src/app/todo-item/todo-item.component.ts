@@ -21,7 +21,7 @@ export class TodoItemComponent {
   }
 
   inputClicked() {
-    this.isEditing = false;
+    this.isEditing = true;
   }
 
   async editTodo(id: string, todo: Todo): Promise<void> {
